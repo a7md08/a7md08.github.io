@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Ahmad Algwary | Live </title>
+
+<!-- Favicon حرف A أصفر -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='%23f5c518'>A</text></svg>">
+
+<!-- استيراد CSS الخاص بـ Video.js -->
+<link href="https://vjs.zencdn.net/8.20.0/video-js.css" rel="stylesheet" />
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Arial, sans-serif;
+    background: #111; /* خلفية داكنة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .video-container {
+    width: 90%;
+    max-width: 1000px;
+    aspect-ratio: 16/9;
+  }
+  .video-js {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+</head>
+<body>
+
+<div class="video-container">
+  <video
+    id="my-video"
+    class="video-js vjs-big-play-centered"
+    controls
+    autoplay
+    muted
+    preload="auto"
+    data-setup='{}'
+  >
+    <source src="https://games1.elahmad.xyz/tv760_www.elahmad.com_baraem1/tracks-v1a1/mono.m3u8?token=ef40c9777bf3a1487d22694a5b2915ebd2b4b43d-1c80ce0df1804c729fb746a52de7c73a-1761511108-1761500308" type="application/x-mpegURL" />
+    المتصفح لا يدعم تشغيل الفيديو.
+  </video>
+</div>
+
+<!-- استيراد مكتبة Video.js -->
+<script src="https://vjs.zencdn.net/8.20.0/video.min.js"></script>
+<script>
+  const player = videojs('my-video');
+  player.ready(() => {
+    player.play().catch(() => {
+      console.warn('التشغيل التلقائي لم ينجح، قد يحتاج المستخدم للنقر لتشغيل الصوت.');
+    });
+  });
+</script>
+
+</body>
+</html>

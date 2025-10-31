@@ -1,9 +1,221 @@
-.video-container, .video-js, video {
-  width: 100% !important;
-  height: 100% !important;
-  margin: 0;
-  padding: 0;
-  display: block;
-  border-radius: 20px; /* للحواف المنحنية */
-  object-fit: cover;   /* يغطي الفيديو كل الإطار بدون فراغات */
+حسنننن 
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ahmad Algwary | Live</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='%23f5c518'>A</text></svg>'>
+<link href="https://vjs.zencdn.net/8.20.0/video-js.css" rel="stylesheet">
+
+<style>
+* {box-sizing:border-box; margin:0; padding:0;}
+:root{
+  --bg1:#0c0c0f;
+  --bg2:#18181e;
+  --accent:#f5c518;
+  --text:#f2f2f2;
+  --muted:#a1a1a1;
+  --card-bg:rgba(255,255,255,0.04);
 }
+html, body {height:100%;}
+body{
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, var(--bg1), var(--bg2));
+  color: var(--text);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  padding:40px 20px 60px;
+  min-height:100vh;
+}
+
+.frame{
+  width:100%;
+  max-width:1080px;
+  background: var(--card-bg);
+  border-radius:24px;
+  padding:40px 32px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.7);
+  display:flex;
+  flex-direction:column;
+  gap:36px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.channels{
+  display:flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  gap:14px;
+}
+
+.channel-btn{
+  min-width:90px;
+  height:58px;
+  border-radius:16px;
+  background: var(--bg2);
+  color: var(--accent);
+  border:2px solid var(--accent);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:600;
+  font-size:15px;
+  letter-spacing:0.3px;
+  cursor:pointer;
+  transition: all 0.3s ease;
+}
+.channel-btn.active,
+.channel-btn:hover{
+  background: var(--accent);
+  color:#111;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow:0 6px 25px rgba(245,197,24,0.25);
+}
+
+.video-container{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 20px 50px rgba(0,0,0,0.6);
+  background:#000;
+}
+.video-js{
+  width:100%;
+  height:100%;
+  border-radius:20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top:50px;
+  padding-top:25px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  width:100%;
+  max-width:1080px;
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.social {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.05);
+  border: 2px solid rgba(245,197,24,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.social svg {width: 24px; height: 24px; fill: white; opacity: 0.95;}
+.social:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(245,197,24,0.25);
+}
+footer p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 18px;
+}
+
+@media (max-width: 768px){
+  body {padding:25px;}
+  .frame {padding:25px 20px; gap:25px;}
+  .channel-btn{min-width:72px;height:48px;font-size:13px;}
+  .social {width:44px;height:44px;}
+  .social svg {width:20px;height:20px;}
+  footer {margin-top:40px;}
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+  <div class="channels" id="channels">
+    <div class="channel-btn active" data-num="1">Channel 1</div>
+    <div class="channel-btn" data-num="2">Channel 2</div>
+    <div class="channel-btn" data-num="3">Channel 3</div>
+    <div class="channel-btn" data-num="4">Channel 4</div>
+    <div class="channel-btn" data-num="5">Channel 5</div>
+    <div class="channel-btn" data-num="6">Channel 6</div>
+  </div>
+
+  <div class="video-container">
+    <video
+      id="my-video"
+      class="video-js vjs-big-play-centered"
+      controls
+      autoplay
+      muted
+      preload="auto"
+      playsinline
+    >
+      <source src="https://liveeu-gcp.alkassdigital.net/alkass1-p/mux_video_720p_ts/index-1.m3u8" type="application/x-mpegURL" />
+      Your browser does not support video.
+    </video>
+  </div>
+</div>
+
+<footer>
+  <div class="socials">
+    <a class="social" href="https://web.facebook.com/ahmad.algwary.98/" target="_blank" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M22 12.07C22 6.48 17.52 2 11.93 2 6.35 2 1.87 6.48 1.87 12.07c0 4.98 3.57 9.12 8.25 9.86v-6.99H8.41V12.07h3.71V9.58c0-3.66 2.17-5.67 5.5-5.67 1.59 0 3.24.28 3.24.28v3.56h-1.82c-1.8 0-2.36 1.12-2.36 2.27v2.05h4.01l-.64 4.86h-3.37v6.99c4.68-.74 8.25-4.88 8.25-9.86z"/></svg>
+    </a>
+    <a class="social" href="https://www.instagram.com/a7md__08/" target="_blank" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" stroke="white" stroke-width="1.4" fill="none"/><circle cx="12" cy="12" r="3.5" stroke="white" stroke-width="1.4" fill="none"/><circle cx="17.6" cy="6.4" r="0.6" fill="white"/></svg>
+    </a>
+  </div>
+  <p>© 2025 Ahmad Algwary — All rights reserved</p>
+</footer>
+
+<script src="https://vjs.zencdn.net/8.20.0/video.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.0/dist/hls.min.js"></script>
+<script>
+const video = document.getElementById('my-video');
+const btns = document.querySelectorAll('.channel-btn');
+let hls = null;
+
+function buildUrl(num){
+  return `https://liveeu-gcp.alkassdigital.net/alkass${num}-p/mux_video_720p_ts/index-1.m3u8`;
+}
+
+function playChannel(num){
+  btns.forEach(b => b.classList.remove('active'));
+  document.querySelector(`.channel-btn[data-num="${num}"]`).classList.add('active');
+  document.title = `Ahmad Algwary | Live Channel ${num}`;
+
+  const src = buildUrl(num);
+  if(hls){ hls.destroy(); hls = null; }
+
+  if(video.canPlayType('application/vnd.apple.mpegurl')){
+    video.src = src;
+    video.play().catch(()=>{});
+  } else if(Hls.isSupported()){
+    hls = new Hls();
+    hls.attachMedia(video);
+    hls.loadSource(src);
+    hls.on(Hls.Events.MANIFEST_PARSED, () => video.play().catch(()=>{}));
+    hls.on(Hls.Events.ERROR, (event, data) => { if(data.fatal){console.error('Error playing the channel');} });
+  } else {
+    alert('Your browser does not support streaming');
+  }
+}
+
+btns.forEach(btn=>btn.addEventListener('click',()=>playChannel(btn.dataset.num)));
+playChannel(1);
+</script>
+</body>
+</html>

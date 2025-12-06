@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ÙØ¬ÙÙØ¹Ø§Øª ÙØ§ØªØ³Ø§Ø¨ - Ahmad Algwary</title>
+
+<!-- Favicon Ø­Ø±Ù A Ø£ØµÙØ± -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='%23f5c518'>A</text></svg>">
+
+<style>
+  * {box-sizing: border-box; margin: 0; padding: 0;}
+  body {
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(180deg, #0f0f12, #16161a);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.6);
+  }
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+  .title {
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #f5c518;
+    text-align: center;
+  }
+  .teacher {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #d1d5db;
+    text-align: center;
+  }
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  a, button {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    flex: 1;
+    text-align: center;
+  }
+  .join {
+    background: linear-gradient(90deg, #f5c518, #ffdd57);
+    color: #111;
+  }
+  .join:hover {
+    background: linear-gradient(90deg, #d4aa0f, #f5c518);
+  }
+  .copy {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+  .copy:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  /* ÙØ³Ù Ø§ÙØªÙØ§ØµÙ */
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 15px;
+  }
+  .social {
+    width: 46px;
+    height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.04);
+    border: 2px solid rgba(245,197,24,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .social svg {width: 22px; height: 22px; fill: white; opacity: 0.95;}
+  .social:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent, #f5c518);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  }
+
+  footer p {
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 768px) {
+    body {padding: 20px;}
+    .card img {height: 150px;}
+    .title {font-size: 19px;}
+    .teacher {font-size: 14px;}
+    .social {width: 40px;height: 40px;}
+    .social svg {width: 18px;height: 18px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="grid">
+  <div class="card">
+    <img src="https://a7md08.github.io/Files/School/Web/pictures/teacher%20pictures/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%B9%D9%85%D8%A7%D8%AF%20%D8%A7%D9%84%D8%B9%D9%85%D9%88%D8%B4.jpg" alt="Ø£Ø­ÙØ§Ø¡">
+    <div class="title">ÙØ§Ø¯Ø© Ø§ÙØ£Ø­ÙØ§Ø¡</div>
+    <div class="teacher">Ø§ÙØ£Ø³ØªØ§Ø° Ø¹ÙØ§Ø¯ Ø§ÙØ¹ÙÙØ´</div>
+    <div class="actions">
+      <a href="https://chat.whatsapp.com/Hq2W9SvlW9pIGMMVDSR64q" target="_blank" class="join">Ø§ÙØ¶Ù</a>
+      <button class="copy" onclick="copyLink('https://chat.whatsapp.com/Hq2W9SvlW9pIGMMVDSR64q')">ÙØ³Ø®</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://a7md08.github.io/Files/School/Web/pictures/teacher%20pictures/13583.jpg" alt="Ø§Ø³ÙØ§ÙÙØ©">
+    <div class="title">ÙØ§Ø¯Ø© Ø§ÙØªØ±Ø¨ÙØ© Ø§ÙØ¥Ø³ÙØ§ÙÙØ©</div>
+    <div class="teacher">Ø§ÙØ£Ø³ØªØ§Ø° ÙØ²Ù Ø§ÙÙÙØ§Ø¬ÙØ©</div>
+    <div class="actions">
+      <a href="https://chat.whatsapp.com/BzpgM0U623VADINErOB5Ok" target="_blank" class="join">Ø§ÙØ¶Ù</a>
+      <button class="copy" onclick="copyLink('https://chat.whatsapp.com/BzpgM0U623VADINErOB5Ok')">ÙØ³Ø®</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://a7md08.github.io/Files/School/Web/pictures/teacher%20pictures/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%A7%D8%B0%20%D9%85%D8%AD%D9%85%D9%88%D8%AF%20%D8%B5%D8%A8%D8%B1%D9%8A.jpg" alt="Ø±ÙØ§Ø¶ÙØ§Øª">
+    <div class="title">ÙØ§Ø¯Ø© Ø§ÙØ±ÙØ§Ø¶ÙØ§Øª</div>
+    <div class="teacher">Ø§ÙØ£Ø³ØªØ§Ø° ÙØ­ÙÙØ¯ ØµØ¨Ø±Ù</div>
+    <div class="actions">
+      <a href="https://chat.whatsapp.com/DRDcqi7hmXnKVHXCcsvoAr" target="_blank" class="join">Ø§ÙØ¶Ù</a>
+      <button class="copy" onclick="copyLink('https://chat.whatsapp.com/DRDcqi7hmXnKVHXCcsvoAr')">ÙØ³Ø®</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://a7md08.github.io/Files/School/Web/pictures/teacher%20pictures/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%B2%D9%8A%D8%A7%D8%AF%20%D8%A7%D9%84%D8%B1%D9%88%D8%A7%D8%B4%D8%AF%D9%87.png" alt="ÙÙØ²ÙØ§Ø¡">
+    <div class="title">ÙØ§Ø¯Ø© Ø§ÙÙÙØ²ÙØ§Ø¡</div>
+    <div class="teacher">Ø§ÙØ£Ø³ØªØ§Ø° Ø²ÙØ§Ø¯ Ø§ÙØ±ÙØ§Ø´Ø¯Ø©</div>
+    <div class="actions">
+      <a href="https://chat.whatsapp.com/CRSBgze7xxPL8ihAaxM1Gf" target="_blank" class="join">Ø§ÙØ¶Ù</a>
+      <button class="copy" onclick="copyLink('https://chat.whatsapp.com/CRSBgze7xxPL8ihAaxM1Gf')">ÙØ³Ø®</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://a7md08.github.io/Files/School/Web/pictures/13580.jpg" alt="Ø¹ÙÙÙ Ø§ÙØ£Ø±Ø¶">
+    <div class="title">ÙØ§Ø¯Ø© Ø¹ÙÙÙ Ø§ÙØ£Ø±Ø¶</div>
+    <div class="teacher">Ø§ÙÙØ¹ÙÙØ© ÙÙØ§Ø¡ ÙÙÙØ§ÙÙ</div>
+    <div class="actions">
+      <a href="https://chat.whatsapp.com/LBvRbqqtbBzKFDwb0xdSyT" target="_blank" class="join">Ø§ÙØ¶Ù</a>
+      <button class="copy" onclick="copyLink('https://chat.whatsapp.com/LBvRbqqtbBzKFDwb0xdSyT')">ÙØ³Ø®</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://a7md08.github.io/Files/School/Web/pictures/13581.png" alt="ØªØ§Ø±ÙØ® Ø§ÙØ£Ø±Ø¯Ù">
+    <div class="title">ÙØ§Ø¯Ø© ØªØ§Ø±ÙØ® Ø§ÙØ£Ø±Ø¯Ù</div>
+    <div class="teacher">Ø§ÙÙØ¹ÙÙÙ ØªØºØ±ÙØ¯ ÙØ·Ø±</div>
+    <div class="actions">
+      <a href="https://chat.whatsapp.com/Crtb5QbmTbbBJArwdraP3m" target="_blank" class="join">Ø§ÙØ¶Ù</a>
+      <button class="copy" onclick="copyLink('https://chat.whatsapp.com/Crtb5QbmTbbBJArwdraP3m')">ÙØ³Ø®</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://a7md08.github.io/Files/School/Web/pictures/13582.jpg" alt="ÙÙØ§Ø±Ø§Øª Ø±ÙÙÙØ©">
+    <div class="title">ÙØ§Ø¯Ø© Ø§ÙÙÙØ§Ø±Ø§Øª Ø§ÙØ±ÙÙÙØ©</div>
+    <div class="teacher">Ø§ÙÙØ¹ÙÙØ© Ø£ÙØ§Ù Ø²Ø§ÙØ¯</div>
+    <div class="actions">
+      <a href="https://chat.whatsapp.com/Crtb5QbmTbbBJArwdraP3m" target="_blank" class="join">Ø§ÙØ¶Ù</a>
+      <button class="copy" onclick="copyLink('https://chat.whatsapp.com/Crtb5QbmTbbBJArwdraP3m')">ÙØ³Ø®</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="socials">
+    <a class="social" href="https://web.facebook.com/ahmad.algwary.98/" target="_blank" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M22 12.07C22 6.48 17.52 2 11.93 2 6.35 2 1.87 6.48 1.87 12.07c0 4.98 3.57 9.12 8.25 9.86v-6.99H8.41V12.07h3.71V9.58c0-3.66 2.17-5.67 5.5-5.67 1.59 0 3.24.28 3.24.28v3.56h-1.82c-1.8 0-2.36 1.12-2.36 2.27v2.05h4.01l-.64 4.86h-3.37v6.99c4.68-.74 8.25-4.88 8.25-9.86z"/></svg>
+    </a>
+    <a class="social" href="https://www.instagram.com/a7md__08/" target="_blank" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" stroke="white" stroke-width="1.4" fill="none"/><circle cx="12" cy="12" r="3.5" stroke="white" stroke-width="1.4" fill="none"/><circle cx="17.6" cy="6.4" r="0.6" fill="white"/></svg>
+    </a>
+  </div>
+  <p>Â© 2025 Ahmad Algwary â Ø¬ÙÙØ¹ Ø§ÙØ­ÙÙÙ ÙØ­ÙÙØ¸Ø©</p>
+</footer>
+
+<script>
+  function copyLink(link) {
+    navigator.clipboard.writeText(link);
+    alert("â ØªÙ ÙØ³Ø® Ø§ÙØ±Ø§Ø¨Ø· Ø¨ÙØ¬Ø§Ø­!");
+  }
+</script>
+
+</body>
+</html>
